@@ -6,5 +6,10 @@ pipeline {
         sh 'echo "hello"'
       }
     }
+    stage('tes1') {
+      steps {
+        sh 'cat README.md'
+      }
+    }
   }
 }
