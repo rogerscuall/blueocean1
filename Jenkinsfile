@@ -1,14 +1,13 @@
 pipeline {
-  agent any
+  agent any 
   stages {
-    stage('test') {
+    stage(‘Build’) {
       steps {
-        sh 'echo "hello"'
-      }
-    }
-    stage('tes1') {
-      steps {
-        sh 'cat README.md'
+        sh ‘echo “Hello World”’
+        sh ‘“
+                  echo “Multiline shell steps works too”
+                  ls -lah
+               “‘
       }
     }
   }
