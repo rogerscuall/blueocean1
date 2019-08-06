@@ -1,14 +1,13 @@
 pipeline {
-  agent any 
-  stages {
-    stage(‘Build’) {
-      steps {
-        echo “Hello World”
-        “
-                  echo “Multiline shell steps works too”
-                  ls -lah
-               “
-      }
+    agent { label 'master' }
+    stages {
+        stage('build') {
+            steps {
+                echo "Hello World!"
+                sh "echo Hello from the shell"
+                sh "hostname"
+                sh "uptime"
+            }
+        }
     }
-  }
 }
