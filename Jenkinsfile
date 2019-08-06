@@ -9,6 +9,7 @@ pipeline {
         sh 'echo Hello from the shell'
         sh 'hostname'
         sh 'uptime'
+        sh 'cat README.MD'
       }
     }
   }
