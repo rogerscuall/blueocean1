@@ -10,6 +10,7 @@ pipeline {
         sh 'hostname'
         sh 'uptime'
         sh 'cat README.md'
+        sh 'tidy -q -e *.html'
       }
     }
   }
