@@ -8,7 +8,7 @@ pipeline {
       stage('Upload to AWS') {
         steps {
           withAWS(region:'us-east-1',credentials:'default') {
-            s3Upload(pathStyleAccessEnabled:true, payloadSigningEnabled: true, file:'index.html', bucket:'c3pipelines-12312312312')
+           s3Upload(file:'mysimple.html', bucket:'udacity-demo1234')
           }
         }
       }
